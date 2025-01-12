@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://cd8jt5ac8psep"]
+
+[ext_resource type="PackedScene" uid="uid://1ss1w8clxnrd" path="res://métier/SallesElements/Objets/objet.tscn" id="1_q53i5"]
+[ext_resource type="Texture2D" uid="uid://cxnoy0d8hb6do" path="res://Ressources/Sprites/01.5- Chemin Alpha/StatueFleur/StatueChrisRbertFleur_01.png" id="2_ote4j"]
+[ext_resource type="Texture2D" uid="uid://dwk6ij34blnk6" path="res://Ressources/Sprites/01.5- Chemin Alpha/StatueFleur/StatueChrisRbertFleur_02.png" id="3_1dj6s"]
+[ext_resource type="Texture2D" uid="uid://0b0epquqaqot" path="res://Ressources/Sprites/01.5- Chemin Alpha/StatueFleur/StatueChrisRbertFleur_03.png" id="4_2f5k2"]
+[ext_resource type="Texture2D" uid="uid://ck055aru0jux" path="res://Ressources/Sprites/01.5- Chemin Alpha/StatueFleur/StatueChrisRbertFleur_04.png" id="5_q0ji3"]
+[ext_resource type="Texture2D" uid="uid://5xnyr61lo1ax" path="res://Ressources/Sprites/01.5- Chemin Alpha/StatueFleur/StatueChrisRbertFleur_05.png" id="6_na24h"]
+[ext_resource type="Texture2D" uid="uid://djijado5wjmyn" path="res://Ressources/Sprites/Généraux/Panneaux/Panneaux_01.png" id="7_luypm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxg5m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ote4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1dj6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2f5k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q0ji3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_na24h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bypce"]
+size = Vector2(733, 722)
+
+[node name="Objet" instance=ExtResource("1_q53i5")]
+dialogue_ids = Array[String](["01.5-CheminAlpha/04-ChoixFinal/02-RobertStatueObjet.json"])
+direction = 2
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(378, 118)
+scale = Vector2(13.2857, 13.2857)
+sprite_frames = SubResource("SpriteFrames_rxg5m")
+autoplay = "default"
+frame_progress = 0.121448
+
+[node name="CollisionShape" parent="." index="1"]
+position = Vector2(356.5, 351)
+shape = SubResource("RectangleShape2D_bypce")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+position = Vector2(357, 496)
+scale = Vector2(14.25, 14.25)
+texture = ExtResource("7_luypm")

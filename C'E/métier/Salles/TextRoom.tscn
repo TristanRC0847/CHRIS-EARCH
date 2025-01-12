@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpo3qev78qe63"]
+
+[ext_resource type="Script" path="res://métier/Salles/TextRoom.gd" id="1_xl15d"]
+[ext_resource type="FontFile" uid="uid://deqq36xjsblna" path="res://Ressources/Fonts/primer.print-regular.otf" id="2_4k4rq"]
+
+[node name="ModeleSceneDialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xl15d")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1079.0
+theme_override_fonts/font = ExtResource("2_4k4rq")
+theme_override_font_sizes/font_size = 58
+text = "À suivre..."
+horizontal_alignment = 1
+vertical_alignment = 1

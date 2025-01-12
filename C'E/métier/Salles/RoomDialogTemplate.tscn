@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd8ds07c8c3dk"]
+
+[ext_resource type="Script" path="res://métier/Salles/RoomDialogTemplate.gd" id="1_cprph"]
+[ext_resource type="PackedScene" uid="uid://dgyvtgxk5clk3" path="res://métier/Dialogues/text_box_cinematic.tscn" id="2_6g3mj"]
+
+[node name="ModeleSceneDialogue" type="Control" groups=["Interactable"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cprph")
+
+[node name="TextBoxCinematic" parent="." instance=ExtResource("2_6g3mj")]

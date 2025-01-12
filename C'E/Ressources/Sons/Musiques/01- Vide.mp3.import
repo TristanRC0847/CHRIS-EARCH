@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dutahl1bpf1qo"
+path="res://.godot/imported/01- Vide.mp3-639c0b080d7f1a922a99f40ff148fb67.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Sons/Musiques/01- Vide.mp3"
+dest_files=["res://.godot/imported/01- Vide.mp3-639c0b080d7f1a922a99f40ff148fb67.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1uobvsvxdbvi"]
+
+[ext_resource type="PackedScene" uid="uid://1ss1w8clxnrd" path="res://métier/SallesElements/Objets/objet.tscn" id="1_hy1gj"]
+[ext_resource type="Texture2D" uid="uid://l2svc5vueku4" path="res://Ressources/Sprites/01- Introduction/Trou.png" id="2_knajj"]
+[ext_resource type="Texture2D" uid="uid://ftnrarnxqam6" path="res://Ressources/Sprites/Généraux/Panneaux/Panneaux_02.png" id="3_wp0dx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jr2vt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_knajj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlyoo"]
+size = Vector2(366, 279)
+
+[node name="Trou" instance=ExtResource("1_hy1gj")]
+scale = Vector2(0.65, 0.65)
+dialogue_ids = Array[String](["01- Introduction/01-Entree/02-1(Trou).json", "01- Introduction/01-Entree/02-2(Trou).json"])
+direction = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(247, 389)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_jr2vt")
+
+[node name="CollisionShape" parent="." index="1"]
+position = Vector2(799, 408)
+shape = SubResource("RectangleShape2D_xlyoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+position = Vector2(748, 386)
+scale = Vector2(15, 15)
+texture = ExtResource("3_wp0dx")

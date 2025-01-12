@@ -1,0 +1,128 @@
+[gd_scene load_steps=18 format=3 uid="uid://tfwnm0maylt7"]
+
+[ext_resource type="Script" path="res://UI/Reseaux.gd" id="1_050mr"]
+[ext_resource type="Shader" path="res://UI/MenuPrincipal.gdshader" id="1_oxb6b"]
+[ext_resource type="Texture2D" uid="uid://ckkul0ge4xvj7" path="res://UI/MenuPrincipalGradient.tres" id="2_a4mbi"]
+[ext_resource type="Texture2D" uid="uid://cdqusvmbhmoes" path="res://Ressources/Sprites/UI/Logos/YouTube.png" id="3_vm0be"]
+[ext_resource type="Texture2D" uid="uid://crs711dukd4gi" path="res://Ressources/Sprites/UI/Logos/Discord.png" id="4_aini2"]
+[ext_resource type="Texture2D" uid="uid://qmcnhidabjja" path="res://Ressources/Sprites/UI/Logos/Twitter.png" id="5_pmvdy"]
+[ext_resource type="Texture2D" uid="uid://cddly5k8vs3yi" path="res://Ressources/Sprites/UI/Logos/bluesky.png" id="6_y1b02"]
+[ext_resource type="Texture2D" uid="uid://cshukam3pyn7c" path="res://Ressources/Sprites/UI/Logos/Tipeee.png" id="7_jdy0r"]
+[ext_resource type="Texture2D" uid="uid://d3xyrgaerupbc" path="res://Ressources/Sprites/UI/Logos/Bouton.png" id="9_l2ly3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2i6x5"]
+shader = ExtResource("1_oxb6b")
+shader_parameter/zoom = 14.0
+shader_parameter/noise_texture = ExtResource("2_a4mbi")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgmqr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5eby2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u568i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6el8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yo308"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oj84h"]
+texture = ExtResource("9_l2ly3")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="Theme" id="Theme_mhxhd"]
+Button/font_sizes/font_size = 18
+Button/styles/normal = SubResource("StyleBoxTexture_oj84h")
+
+[node name="Reseaux" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_050mr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2i6x5")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Reseaux" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 879.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Reseaux"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="YouTube" type="Button" parent="Reseaux/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dgmqr")
+icon = ExtResource("3_vm0be")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Discord" type="Button" parent="Reseaux/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5eby2")
+icon = ExtResource("4_aini2")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Twitter" type="Button" parent="Reseaux/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u568i")
+icon = ExtResource("5_pmvdy")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BlueSky" type="Button" parent="Reseaux/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t6el8")
+icon = ExtResource("6_y1b02")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tipeee" type="Button" parent="Reseaux/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yo308")
+icon = ExtResource("7_jdy0r")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Bouton" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 879.0
+offset_right = 1920.0
+offset_bottom = 1030.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Bouton"]
+layout_mode = 2
+alignment = 1
+
+[node name="RetourMenu" type="Button" parent="Bouton/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = SubResource("Theme_mhxhd")
+theme_override_font_sizes/font_size = 32
+text = "Retour au
+Menu principal"

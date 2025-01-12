@@ -1,0 +1,14 @@
+{
+	"params":"Settings",
+	"language":"Language :",
+	"globalVol" : "Global Volume :",
+	"musicVol" : "Music Volume :",
+	"bruitsVol" : "Sound effects Volume :",
+	"voicesVol" : "Voices Volume :",
+	"SaveAndReturn" : "Save and return\nto Main menu",
+	"testMusic" : "Activate/Deactivate\nMusic",
+	"testBruits" : "Activate/Deactivate\nSound effects",
+	"testVoix" : "Activate/Deactivate\nVoices",
+	"pleinEcran" : "Activate\nDeactivate",
+	"pleinEcranLabel" : "Fullscreen"
+}

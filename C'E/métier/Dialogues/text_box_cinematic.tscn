@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgyvtgxk5clk3"]
+
+[ext_resource type="Script" path="res://métier/Dialogues/text_box_cinematic.gd" id="1_d4jf5"]
+[ext_resource type="FontFile" uid="uid://deqq36xjsblna" path="res://Ressources/Fonts/primer.print-regular.otf" id="2_gx8je"]
+
+[node name="TextBoxCinematic" type="CanvasLayer"]
+script = ExtResource("1_d4jf5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 2
+
+[node name="Dialog" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_gx8je")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]Dialog"
+metadata/_edit_use_anchors_ = true
+
+[node name="Voix" type="AudioStreamPlayer" parent="."]
+bus = &"Voix"

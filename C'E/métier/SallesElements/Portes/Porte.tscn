@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0nnmrux35gfy"]
+
+[ext_resource type="Script" path="res://métier/SallesElements/Portes/Porte.gd" id="1_hsv3s"]
+
+[node name="Porte" type="Area2D" groups=["Porte"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_hsv3s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

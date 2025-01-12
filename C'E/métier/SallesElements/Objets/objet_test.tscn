@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnlydby02341b"]
+
+[ext_resource type="Script" path="res://métier/SallesElements/Objets/objet.gd" id="1_onhid"]
+[ext_resource type="Texture2D" uid="uid://c8edyknncelo8" path="res://Ressources/Sprites/01- Introduction/Ange Statue.png" id="2_m3chg"]
+[ext_resource type="PackedScene" uid="uid://bhqp6awtx573t" path="res://métier/Dialogues/text_box.tscn" id="3_drs6u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_us10h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m3chg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gowol"]
+size = Vector2(25, 35)
+
+[node name="Objet_test" type="Area2D"]
+collision_layer = 7
+collision_mask = 0
+script = ExtResource("1_onhid")
+dialogue_ids = Array[String](["test.json", "test2.json"])
+group = "interactable"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(13, 10)
+sprite_frames = SubResource("SpriteFrames_us10h")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(12.5, 17.5)
+shape = SubResource("RectangleShape2D_gowol")
+one_way_collision_margin = 0.0
+debug_color = Color(0, 0.6, 0.705882, 0.419608)
+
+[node name="TextBox" parent="." instance=ExtResource("3_drs6u")]
+
+[editable path="TextBox"]

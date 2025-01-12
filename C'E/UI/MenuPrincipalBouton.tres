@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cefnp3vuat5ov"]
+
+[ext_resource type="Texture2D" uid="uid://d3xyrgaerupbc" path="res://Ressources/Sprites/UI/Logos/Bouton.png" id="1_n8asf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oj84h"]
+texture = ExtResource("1_n8asf")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[resource]
+Button/font_sizes/font_size = 18
+Button/styles/normal = SubResource("StyleBoxTexture_oj84h")

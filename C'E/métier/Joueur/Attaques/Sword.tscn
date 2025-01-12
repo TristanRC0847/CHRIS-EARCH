@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpcjd6faycr7m"]
+
+[ext_resource type="Script" path="res://métier/Joueur/Attaques/Sword.gd" id="1_6g7se"]
+[ext_resource type="Texture2D" uid="uid://dexxuec0r8um1" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_01.png" id="2_vev8b"]
+[ext_resource type="Texture2D" uid="uid://man38tywh1nc" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_02.png" id="3_pnht4"]
+[ext_resource type="Texture2D" uid="uid://btjpeu0cltebw" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_03.png" id="4_4c8f8"]
+[ext_resource type="Texture2D" uid="uid://b68mmflqjopkg" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_04.png" id="5_606bc"]
+[ext_resource type="Texture2D" uid="uid://hqmsvue3upr7" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_05.png" id="6_tdqni"]
+[ext_resource type="Texture2D" uid="uid://cumi337v3k3ve" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_06.png" id="7_3nwbv"]
+[ext_resource type="Texture2D" uid="uid://dvuslo64ovmm1" path="res://Ressources/Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_07.png" id="8_veifb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hu24p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vev8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pnht4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4c8f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_606bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tdqni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3nwbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_veifb")
+}],
+"loop": false,
+"name": &"generation",
+"speed": 24.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anh25"]
+radius = 5.0
+height = 17.0
+
+[node name="Sword" type="Area2D"]
+z_index = 2
+scale = Vector2(6, 6)
+script = ExtResource("1_6g7se")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hu24p")
+animation = &"generation"
+frame = 6
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_anh25")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_finished"]

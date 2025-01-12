@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjsb18axwo57t"]
+
+[ext_resource type="PackedScene" uid="uid://1ss1w8clxnrd" path="res://métier/SallesElements/Objets/objet.tscn" id="1_a0qw7"]
+[ext_resource type="Texture2D" uid="uid://djijado5wjmyn" path="res://Ressources/Sprites/Généraux/Panneaux/Panneaux_01.png" id="2_djcdq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8lyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_djcdq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sx5lk"]
+size = Vector2(225, 379)
+
+[node name="Robert2" instance=ExtResource("1_a0qw7")]
+dialogue_ids = Array[String](["01.5-CheminAlpha/02-3eme Chute/02-Robert-2.json"])
+direction = 2
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(103, 103)
+scale = Vector2(13.875, 13.875)
+sprite_frames = SubResource("SpriteFrames_y8lyk")
+
+[node name="CollisionShape" parent="." index="1"]
+position = Vector2(102.5, 179.5)
+shape = SubResource("RectangleShape2D_sx5lk")

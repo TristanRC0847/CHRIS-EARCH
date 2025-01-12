@@ -1,0 +1,14 @@
+{
+	"params":"Paramètres",
+	"language":"Langue :",
+	"globalVol" : "Volume Global :",
+	"musicVol" : "Volume Musique :",
+	"bruitsVol" : "Volume Bruitages :",
+	"voicesVol" : "Volume Voix :",
+	"SaveAndReturn" : "Sauvegarder et retourner\nau Menu principal",
+	"testMusic" : "Activer/Désactiver\nMusique",
+	"testBruits" : "Activer/Désactiver\nBruitages",
+	"testVoix" : "Activer/Désactiver\nVoix",
+	"pleinEcran" : "Activer\nDésactiver",
+	"pleinEcranLabel" : "Plein écran :"
+}

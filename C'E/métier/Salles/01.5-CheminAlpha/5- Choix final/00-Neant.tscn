@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr6d5dsjn1r8a"]
+
+[ext_resource type="PackedScene" uid="uid://cd8ds07c8c3dk" path="res://métier/Salles/RoomDialogTemplate.tscn" id="1_b2uq5"]
+[ext_resource type="Script" path="res://métier/Salles/01.5-CheminAlpha/5- Choix final/00-Neant.gd" id="2_aa0h1"]
+
+[node name="ModeleSceneDialogue" instance=ExtResource("1_b2uq5")]
+script = ExtResource("2_aa0h1")

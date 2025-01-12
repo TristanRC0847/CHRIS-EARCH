@@ -1,0 +1,96 @@
+[gd_scene load_steps=19 format=3 uid="uid://cpcjd6faycr7m"]
+
+[ext_resource type="Script" path="res://métier/Joueur/Attaques/Sword.gd" id="1_6g7se"]
+[ext_resource type="Texture2D" uid="uid://dexxuec0r8um1" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_01.png" id="2_vev8b"]
+[ext_resource type="Texture2D" uid="uid://man38tywh1nc" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_02.png" id="3_pnht4"]
+[ext_resource type="Texture2D" uid="uid://btjpeu0cltebw" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_03.png" id="4_4c8f8"]
+[ext_resource type="Texture2D" uid="uid://b68mmflqjopkg" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_04.png" id="5_606bc"]
+[ext_resource type="Texture2D" uid="uid://hqmsvue3upr7" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_05.png" id="6_tdqni"]
+[ext_resource type="Texture2D" uid="uid://cumi337v3k3ve" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_06.png" id="7_3nwbv"]
+[ext_resource type="Texture2D" uid="uid://dvuslo64ovmm1" path="res://Sprites/000- Joueur/Atk - Epee/Formation epee/Chris-attack-epee_07.png" id="8_veifb"]
+[ext_resource type="Texture2D" uid="uid://c3jlgambnjk57" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_01.png" id="9_wd240"]
+[ext_resource type="Texture2D" uid="uid://dwk1mnm3ihb4n" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_02.png" id="10_03h4b"]
+[ext_resource type="Texture2D" uid="uid://blsm20c87jfat" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_03.png" id="11_86tsi"]
+[ext_resource type="Texture2D" uid="uid://1m6urja25042" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_04.png" id="12_hdu06"]
+[ext_resource type="Texture2D" uid="uid://b8isworvgotgi" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_05.png" id="13_pkoxy"]
+[ext_resource type="Texture2D" uid="uid://de34jnt7pwsc1" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_06.png" id="14_nddof"]
+[ext_resource type="Texture2D" uid="uid://p0dgr0oun4ml" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_07.png" id="15_kyu0r"]
+[ext_resource type="Texture2D" uid="uid://b62vlg7oailsi" path="res://Sprites/000- Joueur/Atk - Epee/Attaque epee/Chris-attack-epee_03_08.png" id="16_oci5f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hu24p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_wd240")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_03h4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_86tsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hdu06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pkoxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nddof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kyu0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oci5f")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vev8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pnht4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4c8f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_606bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tdqni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3nwbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_veifb")
+}],
+"loop": false,
+"name": &"generation",
+"speed": 24.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anh25"]
+radius = 122.0
+height = 318.0
+
+[node name="Sword" type="Area2D"]
+script = ExtResource("1_6g7se")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_hu24p")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 41)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_anh25")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,0 +1,137 @@
+[gd_scene load_steps=28 format=3 uid="uid://bs7i2al4a5qpd"]
+
+[ext_resource type="Texture2D" uid="uid://c5g2mi8cy3xni" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_01.png" id="1_1yq0d"]
+[ext_resource type="Script" path="res://métier/Joueur/player_chris.gd" id="1_uyq5w"]
+[ext_resource type="Texture2D" uid="uid://dynsfgn6wlr7g" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_02.png" id="2_6271o"]
+[ext_resource type="Texture2D" uid="uid://b2yuiq6cnxvb4" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_03.png" id="3_3h1yd"]
+[ext_resource type="Texture2D" uid="uid://dffd0k4cimwyt" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_04.png" id="4_d6obn"]
+[ext_resource type="Texture2D" uid="uid://dg26f0k7ibfsg" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_05.png" id="5_cbo3b"]
+[ext_resource type="Texture2D" uid="uid://dxhprpvkfmpjh" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_06.png" id="6_54pha"]
+[ext_resource type="Texture2D" uid="uid://b6c4whobcvx2u" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_07.png" id="7_pj0n6"]
+[ext_resource type="Texture2D" uid="uid://bykq0hxji1n61" path="res://Sprites/000- Joueur/Mouvements/Down/Chris_08.png" id="8_5t5i1"]
+[ext_resource type="Texture2D" uid="uid://w0e5w8q4nmd4" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_17.png" id="17_b7oi1"]
+[ext_resource type="Texture2D" uid="uid://camn4m1fd7g75" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_18.png" id="18_himlw"]
+[ext_resource type="Texture2D" uid="uid://xofrlbe8by0w" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_19.png" id="19_qmat3"]
+[ext_resource type="Texture2D" uid="uid://cpui0xmlxakux" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_20.png" id="20_1kuqq"]
+[ext_resource type="Texture2D" uid="uid://b43f8kp38bnkq" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_21.png" id="21_rcm5t"]
+[ext_resource type="Texture2D" uid="uid://duxtvwrjrrrln" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_22.png" id="22_k6mf0"]
+[ext_resource type="Texture2D" uid="uid://br7dl0chf5qsg" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_23.png" id="23_lxnt2"]
+[ext_resource type="Texture2D" uid="uid://wba03yw0bekd" path="res://Sprites/000- Joueur/Mouvements/Right/Chris_24.png" id="24_l0raj"]
+[ext_resource type="Texture2D" uid="uid://bag7f4yqg7j1v" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_09.png" id="29_d7w4c"]
+[ext_resource type="Texture2D" uid="uid://bx7bpjee4ycws" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_10.png" id="30_p5xuc"]
+[ext_resource type="Texture2D" uid="uid://ct68powj3xn50" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_11.png" id="31_ftb6l"]
+[ext_resource type="Texture2D" uid="uid://4hfm561n2qk8" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_12.png" id="32_ln3ov"]
+[ext_resource type="Texture2D" uid="uid://0gc2ru0xccwn" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_13.png" id="33_ki76j"]
+[ext_resource type="Texture2D" uid="uid://cy8o43ti5yc03" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_14.png" id="34_yu5py"]
+[ext_resource type="Texture2D" uid="uid://ob5rsgo3ddi3" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_15.png" id="35_fexcy"]
+[ext_resource type="Texture2D" uid="uid://b0vmxi4204epg" path="res://Sprites/000- Joueur/Mouvements/Up/Chris_16.png" id="36_lpuxl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cosnp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1yq0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6271o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3h1yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d6obn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cbo3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_54pha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pj0n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5t5i1")
+}],
+"loop": true,
+"name": &"down",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_b7oi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_himlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qmat3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1kuqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rcm5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_k6mf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lxnt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_l0raj")
+}],
+"loop": true,
+"name": &"right",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_d7w4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_p5xuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ftb6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ln3ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ki76j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_yu5py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fexcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lpuxl")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fxb2j"]
+radius = 9.66667
+height = 24.0
+
+[node name="Player_Chris" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_uyq5w")
+speed = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cosnp")
+animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 19)
+shape = SubResource("CapsuleShape2D_fxb2j")
+
+[node name="PlayerCamera" type="Camera2D" parent="."]

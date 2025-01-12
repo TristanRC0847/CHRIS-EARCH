@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bomqy4wajojgd"]
+
+[ext_resource type="PackedScene" uid="uid://cd8ds07c8c3dk" path="res://métier/Salles/RoomDialogTemplate.tscn" id="1_h8hln"]
+[ext_resource type="Script" path="res://métier/Salles/01.5-CheminAlpha/5- Choix final/12-passage_vide.gd" id="2_njdno"]
+
+[node name="PassageVide" instance=ExtResource("1_h8hln")]
+script = ExtResource("2_njdno")
+Musique = "res://Ressources/Sons/Musiques/07- edutiloS.mp3"

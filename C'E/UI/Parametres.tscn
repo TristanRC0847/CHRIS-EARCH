@@ -1,0 +1,228 @@
+[gd_scene load_steps=13 format=3 uid="uid://4onbhtl61rjy"]
+
+[ext_resource type="Script" path="res://UI/Parametres.gd" id="1_7yao1"]
+[ext_resource type="Shader" path="res://UI/MenuPrincipal.gdshader" id="1_t15qs"]
+[ext_resource type="Texture2D" uid="uid://ckkul0ge4xvj7" path="res://UI/MenuPrincipalGradient.tres" id="2_0ji2v"]
+[ext_resource type="Theme" uid="uid://cefnp3vuat5ov" path="res://UI/MenuPrincipalBouton.tres" id="4_6263e"]
+[ext_resource type="AudioStream" uid="uid://dutahl1bpf1qo" path="res://Ressources/Sons/Musiques/01- Vide.mp3" id="5_4mn3c"]
+[ext_resource type="AudioStream" uid="uid://dkhxqv5u06t4g" path="res://Ressources/Sons/Voix/testVoix.mp3" id="6_1de4d"]
+[ext_resource type="AudioStream" uid="uid://1e5hetelvlia" path="res://Ressources/Sons/Bruitages/testBruitages.mp3" id="7_esqlb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3o23"]
+shader = ExtResource("1_t15qs")
+shader_parameter/zoom = 14.0
+shader_parameter/noise_texture = ExtResource("2_0ji2v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkxk0"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.92549, 0.92549, 0.92549, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_4ft8w"]
+OptionButton/styles/normal = SubResource("StyleBoxFlat_dkxk0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4fv1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Theme" id="Theme_pvac8"]
+HSlider/styles/slider = SubResource("StyleBoxFlat_t4fv1")
+
+[node name="Parametres" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7yao1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_p3o23")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="Parametres" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 78
+text = "Paramètres"
+horizontal_alignment = 1
+
+[node name="Langue et Plein ecran" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 160
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Langue et Plein ecran"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Langue et Plein ecran/MarginContainer"]
+layout_mode = 2
+
+[node name="Langues" type="Label" parent="MarginContainer/VBoxContainer/Langue et Plein ecran/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Langue :"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/Langue et Plein ecran/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_4ft8w")
+theme_override_font_sizes/font_size = 45
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Langue et Plein ecran"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Langue et Plein ecran/MarginContainer2"]
+layout_mode = 2
+
+[node name="PleinEcran" type="Label" parent="MarginContainer/VBoxContainer/Langue et Plein ecran/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Plein écran :"
+
+[node name="ModePleinEcran" type="Button" parent="MarginContainer/VBoxContainer/Langue et Plein ecran/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("4_6263e")
+theme_override_font_sizes/font_size = 32
+text = "Activer
+Désactiver"
+
+[node name="VolGlobal" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GlobalLabel" type="Label" parent="MarginContainer/VBoxContainer/VolGlobal"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Volume Global :"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/VolGlobal"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_pvac8")
+
+[node name="VolMusique" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="MusiqueLabel" type="Label" parent="MarginContainer/VBoxContainer/VolMusique"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Volume Musique :"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/VolMusique"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_pvac8")
+
+[node name="TestMusicBouton" type="Button" parent="MarginContainer/VBoxContainer/VolMusique"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("4_6263e")
+theme_override_font_sizes/font_size = 32
+text = "Activer/Désactiver
+Musique"
+
+[node name="VolBruitages" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="BruitagesLabel" type="Label" parent="MarginContainer/VBoxContainer/VolBruitages"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Volume Bruitages :"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/VolBruitages"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_pvac8")
+
+[node name="TestBruitagesBouton" type="Button" parent="MarginContainer/VBoxContainer/VolBruitages"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("4_6263e")
+theme_override_font_sizes/font_size = 32
+text = "Activer/Désactiver
+Bruitages"
+
+[node name="VolVoix" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="VoixLabel" type="Label" parent="MarginContainer/VBoxContainer/VolVoix"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Volume Voix :"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/VolVoix"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_pvac8")
+
+[node name="TestVoixBouton" type="Button" parent="MarginContainer/VBoxContainer/VolVoix"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("4_6263e")
+theme_override_font_sizes/font_size = 32
+text = "Activer/Désactiver
+Voix"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RetourMenu" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_6263e")
+theme_override_font_sizes/font_size = 32
+text = "Sauvegarder et retourner au
+Menu principal"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4mn3c")
+volume_db = -3.975
+autoplay = true
+bus = &"Musiques"
+
+[node name="TestVoix" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1de4d")
+bus = &"Voix"
+
+[node name="TestBruitages" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_esqlb")
+bus = &"Bruitages"

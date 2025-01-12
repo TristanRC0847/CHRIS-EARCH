@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnedpmesnvpph"
+path="res://.godot/imported/03- Solitude.mp3-999b38cddbcd0572639e8789f2fb1bfb.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Sons/Musiques/03- Solitude.mp3"
+dest_files=["res://.godot/imported/03- Solitude.mp3-999b38cddbcd0572639e8789f2fb1bfb.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

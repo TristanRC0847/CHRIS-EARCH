@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://77uu7w0105pt"]
+
+[ext_resource type="PackedScene" uid="uid://1ss1w8clxnrd" path="res://métier/SallesElements/Objets/objet.tscn" id="1_vucvk"]
+[ext_resource type="Texture2D" uid="uid://5ycc5817nsx1" path="res://Ressources/Sprites/01- Introduction/TrouAraignee/trouAraignee_01.png" id="2_v2jxw"]
+[ext_resource type="Texture2D" uid="uid://c6cadmipau7jk" path="res://Ressources/Sprites/01- Introduction/TrouAraignee/trouAraignee_02.png" id="3_kr74d"]
+[ext_resource type="Texture2D" uid="uid://j1vqhep5ds27" path="res://Ressources/Sprites/01- Introduction/TrouAraignee/trouAraignee_03.png" id="4_5l5kr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5nto4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v2jxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v2jxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kr74d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5l5kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kr74d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v2jxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v2jxw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1gqo"]
+size = Vector2(1242, 1100)
+
+[node name="TrouAraignee" instance=ExtResource("1_vucvk")]
+dialogue_ids = Array[String](["01- Introduction/03-SalleAraignee/01-1(trouAraignee beta).json", "01- Introduction/03-SalleAraignee/01-2(trouAraignee beta).json", "01- Introduction/03-SalleAraignee/01-3(trouAraignee beta).json", "01- Introduction/03-SalleAraignee/01-3(trouAraignee beta).json", "01- Introduction/03-SalleAraignee/01-4(trouAraignee beta).json"])
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(281, 275)
+scale = Vector2(14.75, 15.375)
+sprite_frames = SubResource("SpriteFrames_5nto4")
+autoplay = "default"
+frame_progress = 0.369734
+
+[node name="CollisionShape" parent="." index="1"]
+position = Vector2(39, 244)
+shape = SubResource("RectangleShape2D_j1gqo")

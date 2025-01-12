@@ -1,0 +1,107 @@
+[gd_scene load_steps=23 format=3 uid="uid://cnw56bv74gfnc"]
+
+[ext_resource type="PackedScene" uid="uid://1ss1w8clxnrd" path="res://métier/SallesElements/Objets/objet.tscn" id="1_tvgjn"]
+[ext_resource type="Texture2D" uid="uid://bndr37lvmjnho" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_01.png" id="2_3c1ay"]
+[ext_resource type="Texture2D" uid="uid://008m2xk70bf6" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_02.png" id="3_w0ydq"]
+[ext_resource type="Texture2D" uid="uid://b61d302vvhewa" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_03.png" id="4_ca57n"]
+[ext_resource type="Texture2D" uid="uid://cvi8esxpkacoh" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_04.png" id="5_nrg78"]
+[ext_resource type="Texture2D" uid="uid://bl6gkmc63rwjr" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_05.png" id="6_c0tw2"]
+[ext_resource type="Texture2D" uid="uid://cxwmphu2r8d64" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_06.png" id="7_73hwx"]
+[ext_resource type="Texture2D" uid="uid://d7aotl4bkl7k" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_07.png" id="8_g6ujm"]
+[ext_resource type="Texture2D" uid="uid://bing2thbiqab7" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_08.png" id="9_khekn"]
+[ext_resource type="Texture2D" uid="uid://sdd5y3h1gr6m" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_09.png" id="10_nxkw1"]
+[ext_resource type="Texture2D" uid="uid://pxdt04k5bv1x" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_10.png" id="11_wf0er"]
+[ext_resource type="Texture2D" uid="uid://b6oohh4xgd8jp" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_11.png" id="12_xrtky"]
+[ext_resource type="Texture2D" uid="uid://p6v1htnto0hl" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_12.png" id="13_mpt0o"]
+[ext_resource type="Texture2D" uid="uid://b3d18ib8huxby" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_13.png" id="14_r45k4"]
+[ext_resource type="Texture2D" uid="uid://evaeklgcv2nn" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_14.png" id="15_k4hu6"]
+[ext_resource type="Texture2D" uid="uid://dkm2sq8agroel" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_15.png" id="16_qynch"]
+[ext_resource type="Texture2D" uid="uid://bjxdny4jjibpu" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_16.png" id="17_a0km7"]
+[ext_resource type="Texture2D" uid="uid://k83ygdwwk56q" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_17.png" id="18_a01ks"]
+[ext_resource type="Texture2D" uid="uid://ce07lyyc5ycfw" path="res://Ressources/Sprites/01- Introduction/Statue_Chris_Robert/StatueChrisRobert_18.png" id="19_4bkwr"]
+[ext_resource type="Texture2D" uid="uid://ftnrarnxqam6" path="res://Ressources/Sprites/Généraux/Panneaux/Panneaux_02.png" id="20_bxtyg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_prech"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3c1ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w0ydq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ca57n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nrg78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c0tw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_73hwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g6ujm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_khekn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nxkw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wf0er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xrtky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mpt0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_r45k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k4hu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qynch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_a0km7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_a01ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4bkwr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti8ah"]
+size = Vector2(646, 384.5)
+
+[node name="Objet" instance=ExtResource("1_tvgjn")]
+dialogue_ids = Array[String](["01- Introduction/01-Entree/01-1(ChrisRobert).json", "01- Introduction/01-Entree/01-2(ChrisRobert).json"])
+direction = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(495, 280)
+scale = Vector2(16.7982, 12.5952)
+sprite_frames = SubResource("SpriteFrames_prech")
+autoplay = "default"
+frame_progress = 0.171616
+
+[node name="CollisionShape" parent="." index="1"]
+position = Vector2(1351, 419)
+shape = SubResource("RectangleShape2D_ti8ah")
+
+[node name="Panneaux02" type="Sprite2D" parent="." index="3"]
+position = Vector2(1207, 408)
+scale = Vector2(18.4375, 19.5)
+texture = ExtResource("20_bxtyg")

@@ -1,0 +1,77 @@
+[gd_scene load_steps=14 format=3 uid="uid://rwuafj7rvekt"]
+
+[ext_resource type="Script" path="res://métier/Ennemis/01- Introduction/Projectiles_SpiderDart.gd" id="1_m8fdo"]
+[ext_resource type="Texture2D" uid="uid://doy7swhkgqjqt" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_01.png" id="1_wogb1"]
+[ext_resource type="Texture2D" uid="uid://8c5y77yd7l4v" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_02.png" id="2_5td0f"]
+[ext_resource type="Texture2D" uid="uid://bky3e1os7q5kd" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_03.png" id="3_qaefw"]
+[ext_resource type="Texture2D" uid="uid://b3urhgtitbng8" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_04.png" id="4_jy3w3"]
+[ext_resource type="Texture2D" uid="uid://c78p0g7065an0" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_05.png" id="5_q24ac"]
+[ext_resource type="Texture2D" uid="uid://c8mbjvqd31b7c" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_06.png" id="6_jh6lp"]
+[ext_resource type="Texture2D" uid="uid://c8byod5fda6pw" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_07.png" id="7_l5w43"]
+[ext_resource type="Texture2D" uid="uid://cl85gojkp4ub0" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_08.png" id="8_edsu5"]
+[ext_resource type="Texture2D" uid="uid://bufbbinpw81ff" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_09.png" id="9_vsy53"]
+[ext_resource type="Texture2D" uid="uid://decdmthccexvi" path="res://Ressources/Sprites/01- Introduction/Spider_dart/spider_dart_10.png" id="10_h2p7k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q17q8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wogb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5td0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qaefw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jy3w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q24ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jh6lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l5w43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_edsu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vsy53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h2p7k")
+}],
+"loop": true,
+"name": &"spider_dart",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7tdil"]
+size = Vector2(119, 63)
+
+[node name="SpiderDart" type="RigidBody2D"]
+texture_filter = 1
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_m8fdo")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_q17q8")
+animation = &"spider_dart"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-0.499998, -0.499999)
+scale = Vector2(5.95, 3.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_7tdil")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cajtd0yxmrxxy"]
+
+[ext_resource type="Script" path="res://métier/Joueur/player_chris_combat.gd" id="1_ijafv"]
+[ext_resource type="PackedScene" uid="uid://bs7i2al4a5qpd" path="res://métier/Joueur/player_chris.tscn" id="2_lpojc"]
+[ext_resource type="PackedScene" uid="uid://cof1aevs3eo5d" path="res://métier/Salles/000- Test/hud.tscn" id="4_sveuw"]
+
+[sub_resource type="Curve2D" id="Curve2D_v42xj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -8, 0, 0, 0, 0, 1920, -16, 0, 0, 0, 0, 1920, 1056, 0, 0, 0, 0, -8, 1088, 0, 0, 0, 0, 0, -8)
+}
+point_count = 5
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ijafv")
+
+[node name="Player_Chris" parent="." instance=ExtResource("2_lpojc")]
+position = Vector2(960, 496)
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(950, 500)
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_v42xj")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2(0, -8)
+rotation = -0.00416664
+
+[node name="HUD" parent="." instance=ExtResource("4_sveuw")]
+
+[connection signal="hit" from="Player_Chris" to="." method="game_over"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]

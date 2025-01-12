@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://cbdtjgy5cpr1g"]
+
+[ext_resource type="Shader" path="res://UI/MenuPrincipal.gdshader" id="1_8icus"]
+[ext_resource type="Script" path="res://UI/MenuPrincipal.gd" id="1_1638u"]
+[ext_resource type="Texture2D" uid="uid://ckkul0ge4xvj7" path="res://UI/MenuPrincipalGradient.tres" id="2_s5v4b"]
+[ext_resource type="Theme" uid="uid://cefnp3vuat5ov" path="res://UI/MenuPrincipalBouton.tres" id="3_t3ylt"]
+[ext_resource type="Texture2D" uid="uid://c3tvgolml1xec" path="res://Ressources/Sprites/Logo complet.png" id="4_u5xfq"]
+[ext_resource type="AudioStream" uid="uid://dw68v0sq0j80k" path="res://Ressources/Sons/Musiques/00- Entrant dans la spirale.mp3" id="6_wc138"]
+[ext_resource type="FontFile" uid="uid://bj72y5kqelghp" path="res://Ressources/Fonts/primer.print-bold.otf" id="9_spg5y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_226ir"]
+shader = ExtResource("1_8icus")
+shader_parameter/zoom = 7.0
+shader_parameter/noise_texture = ExtResource("2_s5v4b")
+
+[sub_resource type="LabelSettings" id="LabelSettings_4be5l"]
+font = ExtResource("9_spg5y")
+font_size = 50
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1638u")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_226ir")
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1090.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 375.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+texture = ExtResource("4_u5xfq")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Boutons" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 192.0
+offset_right = 767.0
+offset_bottom = 551.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Boutons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 18
+
+[node name="Continuer" type="Button" parent="Boutons/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("3_t3ylt")
+text = "Continuer"
+
+[node name="Nouvelle partie" type="Button" parent="Boutons/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme = ExtResource("3_t3ylt")
+text = "Nouvelle partie"
+
+[node name="Paramètres" type="Button" parent="Boutons/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("3_t3ylt")
+text = "Paramètres"
+
+[node name="Quitter" type="Button" parent="Boutons/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("3_t3ylt")
+text = "Quitter"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 36.0
+offset_top = 966.0
+offset_right = 557.0
+offset_bottom = 1076.0
+text = "version 0.1.0-alpha"
+label_settings = SubResource("LabelSettings_4be5l")
+vertical_alignment = 1
+
+[node name="Commandes" type="Label" parent="."]
+offset_left = 36.0
+offset_top = 432.0
+offset_right = 557.0
+offset_bottom = 888.0
+label_settings = SubResource("LabelSettings_4be5l")
+vertical_alignment = 1
+
+[node name="Reseaux" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1419.0
+offset_top = 966.0
+offset_right = 1918.0
+offset_bottom = 1053.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Reseaux"]
+layout_mode = 2
+alignment = 1
+
+[node name="Reseaux" type="Button" parent="Reseaux/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme = ExtResource("3_t3ylt")
+theme_override_font_sizes/font_size = 50
+text = "Mes réseaux"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wc138")
+autoplay = true
+bus = &"Musiques"

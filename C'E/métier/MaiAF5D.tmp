@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8pu5noe3xah"]
+
+[ext_resource type="Script" path="res://métier/Main.gd" id="1_syayy"]
+[ext_resource type="Script" path="res://métier/SceneHolder.gd" id="2_wuj2t"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_syayy")
+
+[node name="SceneHolder" type="Node2D" parent="."]
+script = ExtResource("2_wuj2t")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

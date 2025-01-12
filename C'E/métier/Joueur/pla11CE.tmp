@@ -1,0 +1,314 @@
+[gd_scene load_steps=65 format=3 uid="uid://c01watxkqy31p"]
+
+[ext_resource type="Texture2D" uid="uid://imacvacy04jg" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_01.png" id="2_o80ys"]
+[ext_resource type="Texture2D" uid="uid://clsh5mx3rxnvf" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_09.png" id="2_y42rs"]
+[ext_resource type="Texture2D" uid="uid://brhb1h7timgxj" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_02.png" id="3_gay3x"]
+[ext_resource type="Texture2D" uid="uid://biyc5xhvw6obv" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_10.png" id="3_gyi73"]
+[ext_resource type="Texture2D" uid="uid://d17a0y8g7jfho" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_03.png" id="4_11o6t"]
+[ext_resource type="Texture2D" uid="uid://c76hyrnv6mi0d" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_11.png" id="4_g151h"]
+[ext_resource type="Texture2D" uid="uid://ct1eeohxbrw1y" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_04.png" id="5_h22di"]
+[ext_resource type="Texture2D" uid="uid://b4ylajqvi574f" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_12.png" id="5_lrgxl"]
+[ext_resource type="Texture2D" uid="uid://dh0527n0nf02k" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_13.png" id="6_2ug2y"]
+[ext_resource type="Texture2D" uid="uid://b4k06p6bpld88" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_05.png" id="6_kbk54"]
+[ext_resource type="Texture2D" uid="uid://dilasl04228pi" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_14.png" id="7_euatp"]
+[ext_resource type="Texture2D" uid="uid://calpph28kaxl5" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_06.png" id="7_j0rov"]
+[ext_resource type="Texture2D" uid="uid://hp5251uusg5p" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_07.png" id="8_egqif"]
+[ext_resource type="Texture2D" uid="uid://cvl4g4h6ci5ff" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_15.png" id="8_j4ius"]
+[ext_resource type="Texture2D" uid="uid://de5g8yj6f2bj1" path="res://Sprites/000- Joueur/Mouvements Mode Combat/down/Chris_16.png" id="9_iwwlc"]
+[ext_resource type="Texture2D" uid="uid://kf40wxii4rhm" path="res://Sprites/000- Joueur/Atk - Epee/Down/Chris-attack_08.png" id="9_yt27i"]
+[ext_resource type="Texture2D" uid="uid://clkwe3byn36l2" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_25.png" id="10_q6bwd"]
+[ext_resource type="Texture2D" uid="uid://d2k8prxvc0ytq" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_25.png" id="10_rjvtd"]
+[ext_resource type="Texture2D" uid="uid://dr5gnlyyksrtd" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_26.png" id="11_2mc4n"]
+[ext_resource type="Texture2D" uid="uid://brjteb26il14" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_26.png" id="11_yjlrt"]
+[ext_resource type="Texture2D" uid="uid://imhav4mlj24f" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_27.png" id="12_hd6wc"]
+[ext_resource type="Texture2D" uid="uid://b6u3dwd57ja5j" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_27.png" id="12_u3uyw"]
+[ext_resource type="Texture2D" uid="uid://c5ctnfpcb5w7l" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_28.png" id="13_5c2hs"]
+[ext_resource type="Texture2D" uid="uid://hiq64t0pxorb" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_28.png" id="13_6xyi4"]
+[ext_resource type="Texture2D" uid="uid://y5a3sjqtfo5e" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_29.png" id="14_by8qg"]
+[ext_resource type="Texture2D" uid="uid://bic42yva8bro2" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_29.png" id="14_p18dn"]
+[ext_resource type="Texture2D" uid="uid://m7vrdvnrfl5n" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_30.png" id="15_7ix1r"]
+[ext_resource type="Texture2D" uid="uid://clujcvdrrau68" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_30.png" id="15_bdk0e"]
+[ext_resource type="Texture2D" uid="uid://cqxjbmtihsntm" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_31.png" id="16_cqucc"]
+[ext_resource type="Texture2D" uid="uid://cuucy5qp2iy3" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_31.png" id="16_fr5x8"]
+[ext_resource type="Texture2D" uid="uid://c5hb775deghue" path="res://Sprites/000- Joueur/Atk - Epee/Left/Chris-attack_32.png" id="17_sbfn2"]
+[ext_resource type="Texture2D" uid="uid://c3rwtpul6fcme" path="res://Sprites/000- Joueur/Mouvements Mode Combat/left/Chris_32.png" id="17_vuqu5"]
+[ext_resource type="Texture2D" uid="uid://bcl7aiae6iicd" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_17.png" id="18_aufkf"]
+[ext_resource type="Texture2D" uid="uid://begmial06wtqd" path="res://Sprites/000- Joueur/Mouvements Mode Combat/still/Chris_01.png" id="18_jwo8g"]
+[ext_resource type="Texture2D" uid="uid://cye4iil78jy0d" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_18.png" id="19_lvtr2"]
+[ext_resource type="Texture2D" uid="uid://c868vv5t781u8" path="res://Sprites/000- Joueur/Mouvements Mode Combat/still/Chris_02.png" id="19_q63vg"]
+[ext_resource type="Texture2D" uid="uid://ta01xquvs6df" path="res://Sprites/000- Joueur/Mouvements Mode Combat/still/Chris_03.png" id="20_h7v30"]
+[ext_resource type="Texture2D" uid="uid://wudla20bo2cx" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_19.png" id="20_xrmgb"]
+[ext_resource type="Texture2D" uid="uid://dt5vamxr5ko1c" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_20.png" id="21_hcwom"]
+[ext_resource type="Texture2D" uid="uid://hyfnmjxbnpv1" path="res://Sprites/000- Joueur/Mouvements Mode Combat/still/Chris_04.png" id="21_qipcj"]
+[ext_resource type="Texture2D" uid="uid://6eqo18yc5unt" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_17.png" id="22_ddag6"]
+[ext_resource type="Texture2D" uid="uid://b45y6jenfi6ek" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_21.png" id="22_rmfax"]
+[ext_resource type="Texture2D" uid="uid://bty875eomj01" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_22.png" id="23_pm7yu"]
+[ext_resource type="Texture2D" uid="uid://dgtsc15oxbdy7" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_18.png" id="23_pv1d0"]
+[ext_resource type="Texture2D" uid="uid://bh3pwhb8l7017" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_23.png" id="24_hh7cx"]
+[ext_resource type="Texture2D" uid="uid://cpyfu2k11dprf" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_19.png" id="24_s6vkj"]
+[ext_resource type="Texture2D" uid="uid://cyyacdeeie8hi" path="res://Sprites/000- Joueur/Atk - Epee/Right/Chris-attack_24.png" id="25_em6vc"]
+[ext_resource type="Texture2D" uid="uid://cg2sj6idlcamo" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_20.png" id="25_v4c8j"]
+[ext_resource type="Texture2D" uid="uid://dyrii1b05uh3d" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_21.png" id="26_dmoni"]
+[ext_resource type="Texture2D" uid="uid://371su24poeho" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_09.png" id="26_eleeu"]
+[ext_resource type="Texture2D" uid="uid://ivnpymuubji0" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_10.png" id="27_ubcxd"]
+[ext_resource type="Texture2D" uid="uid://bej8y571j3bjv" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_22.png" id="27_xyjxp"]
+[ext_resource type="Texture2D" uid="uid://cf1aq1mpv8s3y" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_11.png" id="28_cpxcs"]
+[ext_resource type="Texture2D" uid="uid://cy6fc6kchbe5n" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_23.png" id="28_lwsx6"]
+[ext_resource type="Texture2D" uid="uid://b4sdrkegl46vr" path="res://Sprites/000- Joueur/Mouvements Mode Combat/up/Chris_24.png" id="29_086y6"]
+[ext_resource type="Texture2D" uid="uid://dy2li78uc8aa7" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_12.png" id="29_bafky"]
+[ext_resource type="Texture2D" uid="uid://bp683q1qxe00t" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_13.png" id="30_042we"]
+[ext_resource type="Script" path="res://métier/Joueur/player_chris_combat.gd" id="30_knbyn"]
+[ext_resource type="Texture2D" uid="uid://5pgjwn6kxg8h" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_14.png" id="31_3bs1e"]
+[ext_resource type="Texture2D" uid="uid://b046soxaay3c2" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_15.png" id="32_bm5pt"]
+[ext_resource type="Texture2D" uid="uid://bd1fclj2amw5d" path="res://Sprites/000- Joueur/Atk - Epee/Up/Chris-attack_16.png" id="33_7l2v1"]
+[ext_resource type="PackedScene" uid="uid://cpcjd6faycr7m" path="res://métier/Joueur/Attaques/Sword.tscn" id="62_0vahn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cosnp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_yt27i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o80ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gay3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_11o6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h22di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kbk54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j0rov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_egqif")
+}],
+"loop": false,
+"name": &"attack down",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_sbfn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q6bwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2mc4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_u3uyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5c2hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_p18dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bdk0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cqucc")
+}],
+"loop": false,
+"name": &"attack left",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_em6vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_aufkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_lvtr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xrmgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hcwom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rmfax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pm7yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hh7cx")
+}],
+"loop": false,
+"name": &"attack right",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_7l2v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_eleeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ubcxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cpxcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bafky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_042we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_3bs1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bm5pt")
+}],
+"loop": false,
+"name": &"attack up",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_iwwlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y42rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gyi73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g151h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lrgxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2ug2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_euatp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4ius")
+}],
+"loop": true,
+"name": &"down",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_rjvtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yjlrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hd6wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6xyi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_by8qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7ix1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fr5x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vuqu5")
+}],
+"loop": true,
+"name": &"left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_jwo8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_q63vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h7v30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qipcj")
+}],
+"loop": true,
+"name": &"still",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_086y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ddag6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pv1d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_s6vkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_v4c8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_dmoni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xyjxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lwsx6")
+}],
+"loop": true,
+"name": &"up",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6v26l"]
+size = Vector2(38.6667, 25.3333)
+
+[node name="Player_Chris_combat" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("30_knbyn")
+Sword = ExtResource("62_0vahn")
+speed = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cosnp")
+animation = &"down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.666666, 13)
+shape = SubResource("RectangleShape2D_6v26l")
+
+[node name="atk cooldown" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Sword" parent="." instance=ExtResource("62_0vahn")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="atk cooldown" to="." method="_on_atk_cooldown_timeout"]

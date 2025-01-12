@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw68v0sq0j80k"
+path="res://.godot/imported/00- Entrant dans la spirale.mp3-188fa10538541e81a12dd36e5a581817.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Sons/Musiques/00- Entrant dans la spirale.mp3"
+dest_files=["res://.godot/imported/00- Entrant dans la spirale.mp3-188fa10538541e81a12dd36e5a581817.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

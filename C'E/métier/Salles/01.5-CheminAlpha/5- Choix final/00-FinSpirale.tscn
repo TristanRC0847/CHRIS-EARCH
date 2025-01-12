@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlxocrf1pb0a0"]
+
+[ext_resource type="PackedScene" uid="uid://cpo3qev78qe63" path="res://métier/Salles/TextRoom.tscn" id="1_mksai"]
+
+[node name="ModeleSceneDialogue" instance=ExtResource("1_mksai")]
+Musique = ""
+sceneSuivante = "res://UI/MenuPrincipal.tscn"
+sceneSuivanteIngame = false
+lienText = "01.5-CheminAlpha/05-3 Boucle/00-3NeantFin.json"
+tempsFadeIn = 8.47
+tempsFadeOut = 8.47

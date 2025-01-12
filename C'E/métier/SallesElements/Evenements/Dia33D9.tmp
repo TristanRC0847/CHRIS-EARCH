@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhvuletv0wes8"]
+
+[ext_resource type="PackedScene" uid="uid://bhqp6awtx573t" path="res://métier/Dialogues/text_box.tscn" id="1_gn25m"]
+[ext_resource type="Script" path="res://métier/SallesElements/Evenements/DialogueEvenement.gd" id="1_thqkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3atst"]
+size = Vector2(404, 214)
+
+[node name="DialogueEvenment" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_thqkd")
+group = "DialogEvent"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(192, 97)
+shape = SubResource("RectangleShape2D_3atst")
+
+[node name="TextBox" parent="." instance=ExtResource("1_gn25m")]

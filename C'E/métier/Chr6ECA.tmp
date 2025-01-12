@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8pu5noe3xah"]
+
+[ext_resource type="Script" path="res://métier/SceneHolder.gd" id="2_kmqee"]
+
+[sub_resource type="GDScript" id="GDScript_46i5h"]
+script/source = "extends Node2D
+
+# Musique jouée actuellement en background
+@export var currentMusic : String
+
+var currentScene = preload(\"res://métier/Salles/01- Introduction/IntroMap.tscn\").instantiate()
+
+func _ready() :
+	pass
+
+func _add_a_scene_manually():
+	# This is like autoloading the scene, only
+	# it happens after already loading the main scene.
+	get_tree().root.add_child(currentScene)
+"
+
+[node name="ChrisEarchSceneManager" type="Node2D"]
+script = SubResource("GDScript_46i5h")
+
+[node name="SceneHolder" type="Node2D" parent="."]
+script = ExtResource("2_kmqee")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

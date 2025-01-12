@@ -1,0 +1,10 @@
+{
+	"current_scene": "res://métier/Salles/01- Introduction/Introduction.tscn",
+	"evenements": {
+		"Introduction" : [],
+		"CheminAlpha" : [
+			
+		]
+	},
+	"choix" : {}
+}
